@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/algorithmspreczA.cpp.dir/pary.cpp.o CMakeFiles/algorithmspreczA.cpp.dir/zabka.cpp.o  -o algorithmspreczA.cpp 
