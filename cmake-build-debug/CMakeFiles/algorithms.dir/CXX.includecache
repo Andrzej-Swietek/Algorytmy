@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/andrzejswietek/CLionProjects/algorithms/20_bilet.cpp
+/Users/andrzejswietek/CLionProjects/algorithms/diamentAGH/pri.cpp
 iostream
 -
 vector
 -
-algorithm
+math.h
 -
 

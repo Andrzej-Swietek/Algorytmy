@@ -123,32 +123,32 @@ algorithms/fast:
 	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
-20_bilet.o: 20_bilet.cpp.o
+UJ_jezykC/uj_5_FactorialTgamma.o: UJ_jezykC/uj_5_FactorialTgamma.c.o
 
-.PHONY : 20_bilet.o
+.PHONY : UJ_jezykC/uj_5_FactorialTgamma.o
 
 # target to build an object file
-20_bilet.cpp.o:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/20_bilet.cpp.o
-.PHONY : 20_bilet.cpp.o
+UJ_jezykC/uj_5_FactorialTgamma.c.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/UJ_jezykC/uj_5_FactorialTgamma.c.o
+.PHONY : UJ_jezykC/uj_5_FactorialTgamma.c.o
 
-20_bilet.i: 20_bilet.cpp.i
+UJ_jezykC/uj_5_FactorialTgamma.i: UJ_jezykC/uj_5_FactorialTgamma.c.i
 
-.PHONY : 20_bilet.i
+.PHONY : UJ_jezykC/uj_5_FactorialTgamma.i
 
 # target to preprocess a source file
-20_bilet.cpp.i:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/20_bilet.cpp.i
-.PHONY : 20_bilet.cpp.i
+UJ_jezykC/uj_5_FactorialTgamma.c.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/UJ_jezykC/uj_5_FactorialTgamma.c.i
+.PHONY : UJ_jezykC/uj_5_FactorialTgamma.c.i
 
-20_bilet.s: 20_bilet.cpp.s
+UJ_jezykC/uj_5_FactorialTgamma.s: UJ_jezykC/uj_5_FactorialTgamma.c.s
 
-.PHONY : 20_bilet.s
+.PHONY : UJ_jezykC/uj_5_FactorialTgamma.s
 
 # target to generate assembly for a file
-20_bilet.cpp.s:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/20_bilet.cpp.s
-.PHONY : 20_bilet.cpp.s
+UJ_jezykC/uj_5_FactorialTgamma.c.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/UJ_jezykC/uj_5_FactorialTgamma.c.s
+.PHONY : UJ_jezykC/uj_5_FactorialTgamma.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... algorithms"
-	@echo "... 20_bilet.o"
-	@echo "... 20_bilet.i"
-	@echo "... 20_bilet.s"
+	@echo "... UJ_jezykC/uj_5_FactorialTgamma.o"
+	@echo "... UJ_jezykC/uj_5_FactorialTgamma.i"
+	@echo "... UJ_jezykC/uj_5_FactorialTgamma.s"
 .PHONY : help
 
 

@@ -1,4 +1,4 @@
-def pierwsza(n):
+def pierwsza(x):
     i=2
     if x==1: return False
     while i**2 <= x:
