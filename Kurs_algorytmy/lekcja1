@@ -1,0 +1,437 @@
+19.12.2020 12:00
+
+Bartek Łukasiewicz [obecny]
+
+Mateusz Filipowicz [ok]
+Paulina Nguyen [ok]
+Jakub Supryk[ok]
+Andrzej Wróblewski[OK]
+Patryk Sukiennik[OK]
+Adam Pawlak[OK]
+Krzysztof Ligarski [OK]
+Dominik Szczepaniak [jestem]
+Wiktor Stojek[jestem]
+Krzysztof Mazurkiewicz[jestem]
+Andrzej Swiętek [jestem]
+
+
+Zadanie 2:
+Dany jest ciąg liczb |A_i| <= 1000.
+N <= 500,000
+
+
+Chcemy ten ciąg przeciąć na dwa tak,
+aby wartość bezwględna różnicy była możliwie najmniejsza.
+
+
+Wejście:
+6
+3 -2 3| -4 2 4
+3  1 4   0 2 6
+6  3 5   2 6 4
+
+
+  // Krzysztof
+#include <iostream>
+using namespace std;
+
+const int MAX = 500005;
+int L[MAX], R[MAX], num[MAX];
+
+int main()
+{
+    int length;
+    cin >> length;
+
+    for (int i = 1; i <= length; i++)
+    {
+        cin >> num[i];
+
+        L[i] = L[i - 1] + num[i];
+    }
+
+    for (int i = length; i >= 1; i--)
+    {
+        R[i] = R[i + 1] + num[i];
+    }
+
+    int result = abs(R[1]);
+    for (int i = 2; i <= length; i++)
+    {
+        result = min(result, abs(L[i - 1] - R[i]));
+    }
+
+    cout << result << "\n";
+    return 0;
+}
+
+
+
+NWD - największy wspólny dzielnik
+NWD(24,36) = 12
+
+Algorytm Euklidesa
+NWD(A,B)
+log(A+B)
+
+d | A
+d | B
+d | A - B
+
+(100,3) -> (97,3) -> (94,3) -> (91, 3) -> (91 % 3, 3) -> (1, 3) -> (1,0)
+100 / 3 ~ 33                                                        koniec jeśli trafimy na 0
+(10^6, 1) ~ 10^6
+
+
+NWW - Najmniejsza wspólna wielokrotność
+NWW(12,8) = 24
+NWW(3,5) = 15
+NWW(100,101) = 10100
+
+NWW(A, B) = A * B / NWD(A, B)
+
+24 = 2^3 * 3^1 * 5^0 * 7^0 * ... (3, 1, 0, 0, ...)
+36 = 2^2 * 3^2 * 5^0 * ...       (2, 2, 0, 0, ...)
+                                  2  1
+                                  2^2 * 3^1 = 12
+  2 * 2 * 3 * 3
+  *       *       6
+          *   *   9
+          {3,5} nie jest dzielnikiem
+
+NWD
+  {2, 2, 2, 3}
+  {2, 2, 3, 3}
+
+  -> {2, 2, 3} NWD
+
+A = 2^a1 * 3^a2 * 5^a3 * ...
+B = 2^b1 * 3^b2 * 5^b3 * ...
+
+NWD(A, B) = 2^min(a1,b1) * 3^min(a2,b2) * 5^min(a3,b3) * ...
+
+NWW(A, B) = 2^max(a1,b1) * 3^max(a2,b2) * 5^max(a3,b3) * ...
+
+{2, 2, 2, 3}
+{2, 2, 3, 3}
+
+
+{2, 2, 2, 3} + {2, 2, 3, 3}
+{2, 2, 2, 3, 3} -> NWW
+ *  *     *
+
+(3, 1, 0, 0, ...)
+(2, 2, 0, 0, ...)
+(3, 2, 0, 0 )
+
+
+Praca domowa:
+2) Mandarynki i Wesoła małpka str. 69 i 70.
+
+n <= 1000
+
+nwd(x, y) + nww(x, y) maksymalizujemy
+x, y <= n
+
+
+nwd(x, y) <= min(x, y)
+nww(x, y) ~ x * y , NWD(x, y) = 1
+
+x := n-1
+y := n NWW(n,n-1) = n*(n-1)
+NWD(n,n-1) = 1
+
+Wejście:
+3
+
+nww() maksymalizujemy
+x := n
+y := n - 1
+
+n = 2 -> wynik = 2n
+
+N = 1 (1, 0), (1, 1) -> 1 + 1 = 2
+N = 2 (2, 1) 2 + 1 = 3, (2, 2) -> 2 + 2 = 4
+
+N = 3
+
+
+
+
+int main()
+{
+    long long unsigned n = 0;
+    cin >> n;
+    if (n > 2)
+    {
+        cout << n * (n - 1) + 1;
+    }
+    else
+        cout << 2 * n;
+} //Wiktor Stojek
+
+
+// Krzysztof
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    long long n;
+    cin >> n;
+
+    if (n > 2)
+    {
+        cout << n * (n - 1) + 1;
+    }
+    else
+    {
+        cout << 2 * n;
+    }
+    return 0;
+}
+
+//Dominik
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define ld long double
+#define FOR(i, n, m) for(int i=n; i<m; ++i)
+#define INSPLIT(ar) for (auto &it : ar) cin >> it
+#define SORT(ar) sort((ar).begin(), (ar).end())
+#define SORTD(ar) sort((ar).rbegin(), (ar).rend())
+#define endl '\n'
+#define fast  ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define pb push_back
+#define testcases int t; cin >> t; while(t--)
+#define twodvector(nazwa, size1, size2) vector<vector<int>> nazwa( size1 , vector<int> (size2, 0))
+
+ll nwd(ll a, ll b) {
+    return a==0?(b):(nwd(b % a, a));
+}
+ll nww(ll a, ll b){
+    return (a*b)/nwd(a,b);
+}
+
+int main(){
+    ll n;
+    cin >> n;
+    if(n<=2){
+        cout << 2 * n;
+    }
+    else{
+        cout << nww(n-1, n) + nwd(n, n-1) << endl;
+    }
+}
+
+//Krzysztof
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    long long unsigned a=0;
+    cin>>a;
+    if (a>2)
+    {
+        cout<<a*(a-1)+1;
+    }
+    else
+    {
+        cout<<a*2;
+    }
+
+}
+//Patryk Sukiennik
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+long long n;
+cin >> n;
+if(n > 2){
+         cout << n * (n - 1) + 1;
+}else{
+         cout << 2 * n;
+}
+return 0;
+
+}
+
+
+Wesoła małpka
+
+
+
+//Dominik
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define ld long double
+#define FOR(i, n, m) for(int i=n; i<m; ++i)
+#define INSPLIT(ar) for (auto &it : ar) cin >> it
+#define SORT(ar) sort((ar).begin(), (ar).end())
+#define SORTD(ar) sort((ar).rbegin(), (ar).rend())
+#define endl '\n'
+#define fast  ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define pb push_back
+#define testcases int t; cin >> t; while(t--)
+#define twodvector(nazwa, size1, size2) vector<vector<int>> nazwa( size1 , vector<int> (size2, 0))
+
+ll nwd(ll a, ll b) {
+    return a==0?(b):(nwd(b % a, a));
+}
+
+void solve(){
+	ll n, k;
+	cin >> n >> k;
+	cout << n / nwd(n,k) << endl;
+}
+
+int main(){
+	testcases{
+		solve();
+	}
+}
+//Wiktor
+#include <iostream>
+using namespace std;
+unsigned nwd(unsigned long n, unsigned long d)
+{
+    if (n % d == 0)
+        return d;
+    return nwd(d, n % d);
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    unsigned long n = 0, d = 0, z = 0;
+    cin >> z;
+    for (unsigned long i = 0; i < z; i++)
+    {
+        cin >> n >> d;
+
+        cout << n / nwd(n, d) << '\n';
+    }
+}
+
+// Krzysztof L.
+#include <iostream>
+using namespace std;
+
+long long nwd(long long a, long long b)
+{
+    return a == 0 ? b : nwd(b % a, a);
+}
+
+int main()
+{
+
+    int cases;
+    cin >> cases;
+
+    for (int i = 0; i < cases; i++)
+    {
+        long long n, d;
+        cin >> n >> d;
+        cout << n / nwd(n, d) << "\n";
+    }
+    return 0;
+}
+
+Zbiór pierwszych
+
+zapytanie <= 10^6
+
+a, b <= 10^9
+a = 75 {3, 5}
+b = 90 {2, 3, 5}
+
+{3, 5} c {2, 3, 5} > TAK
+
+Pomysł 1:
+1) znajdźmy dzielniki pierwsze A sqrt(A)
+2) Znajdźmy dzielniki pierwsze B sqrt(B)
+
+120 -> 60 -> 30 -> 15 -> 5 -> 1
+
+d = 2
+d = 3
+
+[2, 3, 5]
+    *
+
+[2, 5, 7, 11]
+    *
+
+Pomysł 2:
+
+{3, 5} c {2, 3, 5}
+ *           *
+    *           *
+
+{3, 5, 5} c {2, 3, 3, 5}
+NWD = {3, 5} = 15
+{5} c {2, 3, 3, 5}
+NWD = {5} = 5
+{} c {2, 3, 3, 5}
+
+log(a) * log(a + b)
+
+A = 75 B = 90
+NWD(A, B) = 15
+A /= 15 = 5, B = 90
+NWD(A, B) = 5
+A /= 5 = 1, B = 90
+
+
+
+
+
+
+//Dominik
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define ld long double
+#define FOR(i, n, m) for(int i=n; i<m; ++i)
+#define SORT(ar) sort((ar).begin(), (ar).end())
+#define SORTD(ar) sort((ar).rbegin(), (ar).rend())
+#define endl '\n'
+#define fast  ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define pb push_back
+#define testcases int t; cin >> t; while(t--)
+#define twodvector(nazwa, size1, size2) vector<vector<int>> nazwa( size1 , vector<int> (size2, 0))
+
+ll nwd(ll a, ll b) {
+    return a==0?(b):(nwd(b % a, a));
+}
+
+void solve(){
+	ll a, b;
+	cin >> a >> b;
+	ll c = nwd(a,b);
+	while(a != 1 && c!=1){
+		a/=c;
+		c = nwd(a,b);
+	}
+	string s = a==1?"TAK":"NIE";
+	cout << s << endl;
+}
+
+int main(){
+	testcases{
+		solve();
+	}
+}
+
+Praca domowa:
+- https://pl.spoj.com/problems/MWP8_1A/
+- https://pl.spoj.com/problems/NWW/
+- Mieszanie kolorów 1B (Potyczki algorytmiczne 2020)
+- Zabawki 2C (Potyczki algorytmiczne 2020)
+Link do zadań: https://sio2.mimuw.edu.pl/c/pa-2020-1/p/
+
+Zachęcam do dobijania zadań z poprzednich tematów na main2.edu.pl

@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/UJ_jezykC/uj_5_FactorialTgamma.c">
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/tutorials/operatorOverload.cpp">
 			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/CMakeLists.txt">

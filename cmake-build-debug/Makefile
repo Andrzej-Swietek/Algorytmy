@@ -123,32 +123,32 @@ algorithms/fast:
 	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
-UJ_jezykC/uj_5_FactorialTgamma.o: UJ_jezykC/uj_5_FactorialTgamma.c.o
+tutorials/operatorOverload.o: tutorials/operatorOverload.cpp.o
 
-.PHONY : UJ_jezykC/uj_5_FactorialTgamma.o
+.PHONY : tutorials/operatorOverload.o
 
 # target to build an object file
-UJ_jezykC/uj_5_FactorialTgamma.c.o:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/UJ_jezykC/uj_5_FactorialTgamma.c.o
-.PHONY : UJ_jezykC/uj_5_FactorialTgamma.c.o
+tutorials/operatorOverload.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o
+.PHONY : tutorials/operatorOverload.cpp.o
 
-UJ_jezykC/uj_5_FactorialTgamma.i: UJ_jezykC/uj_5_FactorialTgamma.c.i
+tutorials/operatorOverload.i: tutorials/operatorOverload.cpp.i
 
-.PHONY : UJ_jezykC/uj_5_FactorialTgamma.i
+.PHONY : tutorials/operatorOverload.i
 
 # target to preprocess a source file
-UJ_jezykC/uj_5_FactorialTgamma.c.i:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/UJ_jezykC/uj_5_FactorialTgamma.c.i
-.PHONY : UJ_jezykC/uj_5_FactorialTgamma.c.i
+tutorials/operatorOverload.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.i
+.PHONY : tutorials/operatorOverload.cpp.i
 
-UJ_jezykC/uj_5_FactorialTgamma.s: UJ_jezykC/uj_5_FactorialTgamma.c.s
+tutorials/operatorOverload.s: tutorials/operatorOverload.cpp.s
 
-.PHONY : UJ_jezykC/uj_5_FactorialTgamma.s
+.PHONY : tutorials/operatorOverload.s
 
 # target to generate assembly for a file
-UJ_jezykC/uj_5_FactorialTgamma.c.s:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/UJ_jezykC/uj_5_FactorialTgamma.c.s
-.PHONY : UJ_jezykC/uj_5_FactorialTgamma.c.s
+tutorials/operatorOverload.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.s
+.PHONY : tutorials/operatorOverload.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... algorithms"
-	@echo "... UJ_jezykC/uj_5_FactorialTgamma.o"
-	@echo "... UJ_jezykC/uj_5_FactorialTgamma.i"
-	@echo "... UJ_jezykC/uj_5_FactorialTgamma.s"
+	@echo "... tutorials/operatorOverload.o"
+	@echo "... tutorials/operatorOverload.i"
+	@echo "... tutorials/operatorOverload.s"
 .PHONY : help
 
 

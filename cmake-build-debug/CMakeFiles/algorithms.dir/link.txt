@@ -1,1 +1,1 @@
-/usr/bin/cc  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/algorithms.dir/UJ_jezykC/uj_5_FactorialTgamma.c.o  -o algorithms 
+/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o  -o algorithms 

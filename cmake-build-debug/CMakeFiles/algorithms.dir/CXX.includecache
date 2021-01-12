@@ -6,11 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/andrzejswietek/CLionProjects/algorithms/diamentAGH/pri.cpp
+/Users/andrzejswietek/CLionProjects/algorithms/tutorials/operatorOverload.cpp
 iostream
 -
-vector
--
-math.h
+string
 -
 
