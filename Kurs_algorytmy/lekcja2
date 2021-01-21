@@ -1,0 +1,444 @@
+16.01.2021 12:00
+
+Mateusz Filipowicz [ok]
+Paulina Nguyen [ok]
+Andrzej Wróblewski[OK]
+Adam Pawlak[OK]
+Krzysztof Ligarski [OK]
+Dominik Szczepaniak [ok]
+Wiktor Stojek
+Krzysztof Mazurkiewicz[ok]
+Andrzej Swiętek[ok]
+Piotr Bonar[ok]
+Damian Żabicki [ok]
+Jerzy Puchalski[ok]
+Grzegorz Iwaszkiewicz[ok]
+Patryk Sukiennik[ok]
+
+Praca domowa:
+- https://pl.spoj.com/problems/MWP8_1A/
+
+
+//Dominik
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define ld long double
+#define FOR(i, n, m) for(int i=n; i<m; ++i)
+#define SORT(ar) sort((ar).begin(), (ar).end())
+#define SORTD(ar) sort((ar).rbegin(), (ar).rend())
+#define endl '\n'
+#define fast  ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define pb push_back
+#define testcases int t; cin >> t; while(t--)
+#define twodvector(nazwa, size1, size2) vector<vector<int>> nazwa( size1 , vector<int> (size2, 0))
+
+int nwd(int a, int b) {
+    return a==0?(b):(nwd(b % a, a));
+}
+
+void solve(){
+	int n;
+	cin >> n;
+	vector<int> all(n);
+	twodvector(arr, n,n); //odpowiedz  -- vector<vector<int>> nazwa( size1 , vector<int> (size2, 0))
+	FOR(i,0,n){
+		cin >> all[i];
+		arr[i][i] = all[i];
+	}
+	//wczytywanie liczb ^^
+	FOR(k,0,n){
+		for(int j=k+1; j<n; j++){
+			int c =  nwd(all[k], all[j]); //liczenie nwd z poziomu i pionu
+			arr[k][j] = c;
+			arr[j][k] = c;
+		}
+	}
+
+	FOR(i,0,n){
+		FOR(j,0,n){
+			cout << arr[i][j] << " ";
+		}
+		cout << endl;
+	}
+	//wyswietlenie
+}
+
+int main(){
+	solve();
+}
+
+
+
+
+// Krzysztof L.
+// SPOJ: Macierz NWD
+#include <iostream>
+using namespace std;
+
+int nwd(int a, int b)
+{
+    return a == 0 ? b : nwd(b % a, a);
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    int numbers[n + 1];
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> numbers[i];
+    }
+
+    int matrix[n + 1][n + 1];
+    for (int i = 1; i <= n; i++)
+    {
+        matrix[i][i] = numbers[i];
+    }
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j < i; j++)
+        {
+            matrix[i][j] = nwd(numbers[i], numbers[j]);
+            matrix[j][i] = matrix[i][j];
+        }
+    }
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout << matrix[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+
+// Krzysztof L.
+// SPOJ: Macierz NWD
+#include <iostream>
+using namespace std;
+
+int nwd(int a, int b)
+{
+    return a == 0 ? b : nwd(b % a, a);
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    int numbers[n + 1];
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> numbers[i];
+    }
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout << nwd(numbers[i], numbers[j]) << " ";
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
+
+Złożoność czasowa: O(N^2 * log(max(numbers)))?
+
+
+- https://pl.spoj.com/problems/NWW/
+
+
+//
+// Created by Andrzej Świętek on 1/16/21.
+//
+
+#include<iostream>
+#include <stack>
+
+#define ll long long
+
+using namespace std;
+
+ll nwd(ll a, ll b){
+    return a == 0 ? b : nwd(b % a, a);
+}
+ll nww(ll a, ll b){
+    return a*b / nwd(a,b);
+}
+
+void solve(){
+    ll ileLiczb;
+    stack <ll> stack;
+    stack.push(1);
+    cin >> ileLiczb;
+    while(ileLiczb--){
+        ll tmp;
+        cin >> tmp;
+        stack.emplace( nww(stack.top(),tmp) );
+    }
+    cout << endl << stack.top();
+}
+
+void solve(){
+    ll ileLiczb;
+    ll wynik = 1;
+    cin >> ileLiczb;
+    while(ileLiczb--){
+        ll tmp;
+        cin >> tmp;
+        wynik = nww(wynik, tmp);
+    }
+    cout << endl << wynik;
+}
+
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n;
+    cin >> n;
+
+    while(n--)
+        solve();
+
+    return 0;
+}
+
+O((n1 + n2 + ... + nt) * log(max wartosci))
+
+
+Zabawki 2C (Potyczki algorytmiczne 2020) https://sio2.mimuw.edu.pl/c/pa-2020-1/p/
+
+TAK +++++
+NIE +++++++
+
+acb -> bca -> acb
+abc
+
+
+abcdefg
+    *
+eabcdfg
+    *
+edabcfg
+edgbcfa
+
+x.a.b.x.x.x.x
+  b.a
+
+Odpowiedź = TAK, jeśli
+Anagramami są podciąg parzyste pierwszego i podciąg parzysty drugiego
+ORAZ
+Anagramami są podciag nieparzysty pierwszego i podciąg nieparzysty drugiego
+
+
+- Mieszanie kolorów 1B (Potyczki algorytmiczne 2020) https://sio2.mimuw.edu.pl/c/pa-2020-1/p/
+
+   1  2  3  4  5  6  7
+R
+G
+B
+O(nm)
+
+
+  1  2  3  4  5  6  7  8  9  10
+     2  1       -1 -1 -1
+  0  2  3  3  3  2  1  0  0   0
+     +  +  +  +  +  +
+
+2 6 +
+3 5 +
+2 7
+
+Set 1:
+Zadanie 1: https://atcoder.jp/contests/abc186/tasks/abc186_d
+3 <- N <= 200,000
+5 1 2 <= 10^8
+
+|5-1| = 4
+|5-2| = 3
+|1-2| = 1
+Wynik 4 + 3 + 1 = 8
+
+O(N^2) -> 200,000^2 = 4 * 10^10
+
+3
+1 2 5
+
+
+i < j
+A[i] <= A[j] -> A[j] - A[i]
+
+
+       *
+3 5 6  9  9
+  2 4 13 13
+
+5-3=2
+1*5-3=2
+
+6-5=1
+6-3=3
+2*6-8=4
+
+9-3=6
+9-5=4
+9-6=3
+3*9-14=13
+
+9-3
+9-5
+9-6
+9-9
+4*9-23=13
+
+Złożoność czasowa: N*log(N)
+
+
+
+Zadanie 2: https://atcoder.jp/contests/abc120/tasks/abc120_c
+0100100
+ **
+00100
+ **
+000
+ w jednym ruchu możemy wziąć dwa sąsiednie różne litery i je usunąć
+ Ile najwięcej liter można usunąć?
+
+Wynik: 4
+
+długość tekstu <= 200,000.
+
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define FOR(i, n, m) for(int i=n; i<m; ++i)
+#define twodvector(nazwa, size1, size2) vector<vector<int>> nazwa( size1 , vector<int> (size2, 0))
+
+
+
+void solve2(){
+	string s;
+	cin >> s;
+	int ans = 0; //liczba cyfer ktore sie usunie
+	while(true){
+		bool change = false;
+		FOR(i,0,s.length()-1){
+			if((s[i]=='0' && s[i+1]=='1') || ( s[i] == '1' && s[i+1] == '0')){ //s[i] != s[i+1]
+ 				s = s.substr(0,i) + s.substr(i+2, s.length());
+				change = true;
+				ans+=2;
+				break;
+			}
+		}
+		if(!change){
+			break;
+		}
+	}
+	cout << ans << endl;
+}
+
+0000000011111111
+
+O(N^2)
+
+int main(){
+	solve2();
+	return 0;
+}
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+	string napis;
+	cin >> napis;
+	int w1 = 0, w0 = 0;
+
+	for (int i = 0; i < napis.size(); i++) {
+		if (napis[i] == '0') w0++;
+		else w1++;
+	}
+	cout << 2 * min(w0, w1);
+}
+
+Zadanie1:++++++
+Zadanie2:+++++++
+
+
+
+Set 2:
+
+Zadanie 1 (https://atcoder.jp/contests/abc109/tasks/abc109_c):
+stoimy w miejscu X <= 10^9
+W nektórych miejscach znajdują się kamienie x1, x2, x3, ..., xn. xi <= 10^9
+N <= 100,000
+
+X - d, X + d
+Cel: odwiedzić każdy kamień
+
+Jakie największe d można wybrać?
+
+Wejście:
+3 3
+1 7 11
+
+Wyjście:
+2 <- największe d
+
+3 -> 1 -> 3 -> 5 -> 7 -> 9 -> 11
+
+
+X1-X=a1=d*k1
+X2-X=a2=d*k2
+X3-X=a3=d*k3
+...
+Xn-X=an=d*kn
+dystanse, które należy pokonać do poszczególnych kamieni
+
+d = NWD(a1,a2,a3,...,an)
+
+
+Zadanie 2 (https://atcoder.jp/contests/abc105/tasks/abc105_d)
+3 2 N <= 100,000, 2 <= M <= 10^9
+4 1 5
+*
+  ***
+*****
+
+Wynik:
+3
+
+Ile jest podsłów (spójny fragmentów), że suma jest podzielna przez M?
+
+M=2?
+
+sumy prefiksowe
+
+....[i            j]............
+(S[j] - S[i - 1]) % 2 == 0
+S[j] % 2 == S[i - 1] % 2
+
+  4  1  5
+0 0  1  0 <- sumy prefiksowe % 2
+każda para tych samych reszt opisuje poprawny przedział, czyli taki o parzystej sumie
+
+
+Praca domowa:
+- https://atcoder.jp/contests/abc186/tasks/abc186_d (implementacja)
+- https://atcoder.jp/contests/abc120/tasks/abc120_c (implementacja)
+- https://atcoder.jp/contests/abc109/tasks/abc109_c (implementacja)
+- https://atcoder.jp/contests/abc105/tasks/abc105_d (do pomyślenia)

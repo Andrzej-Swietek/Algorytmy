@@ -123,32 +123,32 @@ algorithms/fast:
 	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
-tutorials/operatorOverload.o: tutorials/operatorOverload.cpp.o
+Kurs_algorytmy/DsumDEference.o: Kurs_algorytmy/DsumDEference.cpp.o
 
-.PHONY : tutorials/operatorOverload.o
+.PHONY : Kurs_algorytmy/DsumDEference.o
 
 # target to build an object file
-tutorials/operatorOverload.cpp.o:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o
-.PHONY : tutorials/operatorOverload.cpp.o
+Kurs_algorytmy/DsumDEference.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o
+.PHONY : Kurs_algorytmy/DsumDEference.cpp.o
 
-tutorials/operatorOverload.i: tutorials/operatorOverload.cpp.i
+Kurs_algorytmy/DsumDEference.i: Kurs_algorytmy/DsumDEference.cpp.i
 
-.PHONY : tutorials/operatorOverload.i
+.PHONY : Kurs_algorytmy/DsumDEference.i
 
 # target to preprocess a source file
-tutorials/operatorOverload.cpp.i:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.i
-.PHONY : tutorials/operatorOverload.cpp.i
+Kurs_algorytmy/DsumDEference.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.i
+.PHONY : Kurs_algorytmy/DsumDEference.cpp.i
 
-tutorials/operatorOverload.s: tutorials/operatorOverload.cpp.s
+Kurs_algorytmy/DsumDEference.s: Kurs_algorytmy/DsumDEference.cpp.s
 
-.PHONY : tutorials/operatorOverload.s
+.PHONY : Kurs_algorytmy/DsumDEference.s
 
 # target to generate assembly for a file
-tutorials/operatorOverload.cpp.s:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.s
-.PHONY : tutorials/operatorOverload.cpp.s
+Kurs_algorytmy/DsumDEference.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.s
+.PHONY : Kurs_algorytmy/DsumDEference.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... algorithms"
-	@echo "... tutorials/operatorOverload.o"
-	@echo "... tutorials/operatorOverload.i"
-	@echo "... tutorials/operatorOverload.s"
+	@echo "... Kurs_algorytmy/DsumDEference.o"
+	@echo "... Kurs_algorytmy/DsumDEference.i"
+	@echo "... Kurs_algorytmy/DsumDEference.s"
 .PHONY : help
 
 

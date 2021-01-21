@@ -1,1 +1,1 @@
-/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o  -o algorithms 
+/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o  -o algorithms 

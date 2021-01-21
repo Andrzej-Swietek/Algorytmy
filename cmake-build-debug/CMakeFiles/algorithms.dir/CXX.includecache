@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/andrzejswietek/CLionProjects/algorithms/tutorials/operatorOverload.cpp
+/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/MWP8_1A-Macierz NWD.cpp
 iostream
 -
-string
+vector
 -
 

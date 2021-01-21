@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/tutorials/operatorOverload.cpp">
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/DsumDEference.cpp">
 			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/CMakeLists.txt">

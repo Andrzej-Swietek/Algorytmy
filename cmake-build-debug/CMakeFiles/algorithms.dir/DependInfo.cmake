@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/andrzejswietek/CLionProjects/algorithms/tutorials/operatorOverload.cpp" "/Users/andrzejswietek/CLionProjects/algorithms/cmake-build-debug/CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o"
+  "/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/DsumDEference.cpp" "/Users/andrzejswietek/CLionProjects/algorithms/cmake-build-debug/CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

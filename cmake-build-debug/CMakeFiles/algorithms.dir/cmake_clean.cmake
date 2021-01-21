@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o"
+  "CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o"
   "algorithms"
   "algorithms.pdb"
 )

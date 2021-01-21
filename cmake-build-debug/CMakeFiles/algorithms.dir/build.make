@@ -57,27 +57,27 @@ include CMakeFiles/algorithms.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/algorithms.dir/flags.make
 
-CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o: CMakeFiles/algorithms.dir/flags.make
-CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o: ../tutorials/operatorOverload.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrzejswietek/CLionProjects/algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o -c /Users/andrzejswietek/CLionProjects/algorithms/tutorials/operatorOverload.cpp
+CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o: CMakeFiles/algorithms.dir/flags.make
+CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o: ../Kurs_algorytmy/DsumDEference.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrzejswietek/CLionProjects/algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o -c /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/DsumDEference.cpp
 
-CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrzejswietek/CLionProjects/algorithms/tutorials/operatorOverload.cpp > CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.i
+CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/DsumDEference.cpp > CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.i
 
-CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrzejswietek/CLionProjects/algorithms/tutorials/operatorOverload.cpp -o CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.s
+CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/DsumDEference.cpp -o CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.s
 
 # Object files for target algorithms
 algorithms_OBJECTS = \
-"CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o"
+"CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o"
 
 # External object files for target algorithms
 algorithms_EXTERNAL_OBJECTS =
 
-algorithms: CMakeFiles/algorithms.dir/tutorials/operatorOverload.cpp.o
+algorithms: CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o
 algorithms: CMakeFiles/algorithms.dir/build.make
 algorithms: CMakeFiles/algorithms.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/andrzejswietek/CLionProjects/algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable algorithms"
