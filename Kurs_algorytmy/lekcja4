@@ -1,0 +1,477 @@
+06.02.2021 12:00
+
+Mateusz Filipowicz [ok]
+Paulina Nguyen [ok] [panula]
+Andrzej Wróblewski[OK] [Orion267]
+Adam Pawlak[OK]
+Krzysztof Ligarski [OK] [kligarski]
+Dominik Szczepaniak [ok] [slxshxr]
+Wiktor Stojek [ok] [wiktorstojek7]
+Andrzej Swiętek [ok] [andiwikkuba]
+Piotr Bonar [ok]
+Damian Żabicki [ok] [kafe2201]
+Jerzy Puchalski[ok]
+Grzegorz Iwaszkiewicz[ok]
+Krzysztof Mazurkiewicz[ok][coderfn]
+
+bartek.lukasiewicz@gmail.com
+Bartek Łukasiewicz
+
+
+
+1) Implementacja "Spotkanie".
+
+
+#include <iostream>
+using namespace std;
+
+const int CYKL = 60;
+
+int main()
+{
+    int n;
+    cin >> n;
+    int fib[CYKL];
+    fib[0] = 1;
+    fib[1] = 1;
+    for (int i = 2; i < CYKL; i++)
+    {
+        fib[i] = (fib[i - 1] + fib[i - 2]) % 10;
+    }
+    cout << (fib[n % CYKL] + fib[((n - 2 + CYKL) % CYKL]) % 10;
+} //Wiktor
+
+
+
+
+#include <iostream>
+#include <vector>
+
+#define l long
+#define s short
+#define vi vector<l>
+
+using namespace std;
+
+const s DL = 60;
+const s TL[DL] = { 0, 1, 1, 2, 3, 5, 8, 3, 1, 4, 5, 9, 4, 3, 7, 0, 7, 7, 4, 1, 5, 6, 1, 7, 8, 5, 3, 8,
+		1, 9, 0, 9, 9, 8, 7, 5, 2, 7, 9, 6, 5, 1, 6, 7, 3, 0, 3, 3, 6, 9, 5, 4, 9, 3, 2, 5, 7, 2, 9, 1 };
+
+int Fib(int n){
+	n = n + 1 % DL;
+	return TL[n];
+}
+
+
+int main() {
+	int n;
+	cin >> n;
+	if( n - 2 > 0)
+		cout << (Fib(n) + Fib(n - 2)) % 10;
+	else cout << Fib(n);
+
+	return 0;
+}//Jerzy
+
+
+// Krzysztof L.
+#include <iostream>
+using namespace std;
+
+const int N = 105;
+int fibonacci[N];
+
+int main()
+{
+    int divisor;
+    // fibonacci[0] = 0
+    fibonacci[1] = 1;
+    fibonacci[2] = 1;
+    for (int i = 3; i < N; i++)
+    {
+        fibonacci[i] = (fibonacci[i - 1] + fibonacci[i - 2]) % 10;
+        if (fibonacci[i] == 0 && fibonacci[i - 1] == 1)
+        {
+            divisor = i;
+            break;
+        }
+    }
+
+    int index;
+    cin >> index;
+
+    index++;
+    index %= divisor;
+
+    cout << (fibonacci[index] + fibonacci[(index - 2 + divisor) % divisor]) % 10;
+    return 0;
+}
+
+
+
+2) Implementacja "Drabina".
+
+// Dominik
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define FOR(i, n, m) for(int i=n; i<m; ++i)
+#define ll long long
+
+int main(){
+	ll dwojki[31];
+	dwojki[1] = 2;
+	for(int i = 2; i<=30; i++){
+		dwojki[i] = dwojki[i-1]*2;
+	}
+	vector<ll> fib(1000001,0);
+	ll div = dwojki[30];
+	fib[1] = 1;
+	fib[2] = 2;
+	for(int i = 3; i<=1000000; i++){
+		fib[i] = (fib[i-1] + fib[i-2]) % div;
+	}
+	int t;
+	cin >> t;
+	while(t--){
+		int n, p;
+		cin >> n >> p;
+		cout << fib[n] % dwojki[p] << endl;
+	}
+	return 0;
+}
+
+// Krzysztof L.
+#include <iostream>
+using namespace std;
+
+const int MAX_EXPONENT = 30;
+const int MAX_LADDER_STEPS = 1000000;
+
+int powers[MAX_EXPONENT + 1];
+int fibonacci[MAX_LADDER_STEPS + 5];
+
+int main()
+{
+    // Generate powers of 2
+    powers[0] = 1;
+    for (int i = 1; i <= MAX_EXPONENT; i++)
+    {
+        powers[i] = powers[i - 1] * 2;
+    }
+
+    // Generate fibonacci's sequence
+    fibonacci[0] = 1;
+    fibonacci[1] = 1;
+    for (int i = 2; i <= MAX_LADDER_STEPS; i++)
+    {
+        fibonacci[i] = (fibonacci[i - 1] + fibonacci[i - 2]) % powers[30];
+    }
+
+    // Respond to test cases
+    int tests;
+    cin >> tests;
+    for (int i = 0; i < tests; i++)
+    {
+        int steps, power;
+        cin >> steps >> power;
+
+        cout << fibonacci[steps] % powers[power] << "\n";
+    }
+    return 0;
+}
+
+#include <iostream> // Wiktor
+#include <math.h>
+using namespace std;
+#define ull unsigned long long
+#define u unsigned
+int main()
+{
+    cin.tie(0);
+    cout.tie(0);
+    ios::sync_with_stdio(0);
+    ull *f = new ull [1000000];
+    u z;
+    f[0] = 1;
+    f[1] = 1;
+    u pot[31];
+    for (u i = 0; i <= 31; i++)
+        pot[i]=pow(2,i);
+    for (u i = 2; i <= 1000000; i++)
+    {
+        f[i] = (f[i - 1] + f[i - 2]) % pot[30];
+    }
+    cin >> z;
+    u s = 0, p = 0, i = 0;
+    while (i < z)
+    {
+        cin >> s >> p;
+        cout << (f[s]) % pot[p] << '\n';
+        i++;
+    }
+}
+//Damian
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	int z;
+	cin>>z;
+	int zapis[3][z];
+	int maksymalna=0;
+	for (int i=0;i<z;i++) {
+		cin>>zapis[1][i]>>zapis[2][i];
+		maksymalna=max(maksymalna, zapis[1][i]);
+	}
+
+	int fib[maksymalna+1];
+	fib[0]=1;
+	fib[1]=1;
+	int dwojki[31];
+	dwojki[0]=1;
+	for (int i=1;i<=30;i++) dwojki[i]=dwojki[i-1]*2;
+	for (int i=2;i<=maksymalna;i++){
+		fib[i]=(fib[i-1]+fib[i-2])%dwojki[30];
+	}
+	for (int i=0;i<z;i++){
+		int zmienna=fib[zapis[1][i]];
+		int zmienna2=dwojki[zapis[2][i]];
+		int wynik=zmienna%zmienna2;
+		cout<<wynik<<endl;
+	}
+}
+
+2^p    (1 << p)
+
+
+0000000001
+0000001000
+
+============ Wyszukiwanie binarne ====================
+
+Zadanie 1:
+Mamy N (N <= 100,000) zapytań.
+Czy liczba X (X <= 10^12) ma dokładnie 3 dzielniki?
+
+
+Wejście:
+3
+4 5 6
+
+Wyjście:
+YES
+NO
+NO
+
+
+Liczba ma dokładnie 3 dzielniki, jeśli jest postaci p^2 (p jest pierwsze).
+Jej dzielniki to 1, p oraz p^2.
+
+
+1 .. 10^12
+
+1 .. 500,000 .. 10^6
+
+
+// Dominik
+const int MAX = 1000*1000+1;
+
+ll tab[MAX];
+
+void sito(int n)
+{
+	for (int i=2; i*i<=n; i++)
+    {
+        if(!tab[i])
+		for (int j = i*i ; j<=n; j+=i)
+            tab[j] = 1;
+    }
+}
+
+//Wiktor
+#include<iostream>
+using namespace std;
+const int MAX = 1000000;
+int main()
+{
+    int * s = new int[MAX];
+    for(int i = 2;i*i<=MAX;i++)
+    {
+        if(s[i]==0)
+        {
+            for(int j = i;j<=MAX;j+=i)
+                s[j] = 1;
+        }
+    }
+
+}
+
+
+
+
+//Bartek
+#include <iostream>
+using namespace std;
+
+const int MAX = 1000000;
+
+bool sito[MAX]; // czy liczba jest zlozona
+
+void gen_sito() {
+  sito[1] = true;
+  for (int i = 2; i * i <= MAX; i++) {
+    if (!sito[i]) {
+      for (int k = i * i; k <= MAX; k += i) {
+        sito[k] = true;
+      }
+    }
+  }
+}
+
+void policz(long long x) {
+    long long pocz = 1, kon = MAX;
+
+    while(pocz < kon) {
+        long long srodek = (pocz + kon) / 2;
+        if(srodek * srodek < x) {
+            pocz = srodek + 1;
+        } else {
+            kon = srodek;
+        }
+    }
+
+    if(pocz * pocz == x && !sito[pocz]) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
+}
+
+int main() {
+  gen_sito();
+
+  int n;
+  cin >> n;
+
+  while (n--) {
+    long long x;
+    cin >> x;
+    policz(x);
+  }
+
+  return 0;
+}
+================
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define FOR(i, n, m) for(int i=n; i<m; ++i)
+#define ll long long
+
+const int MAX = 1000*1000+1;
+
+ll tab[MAX];
+
+void sito(int n)
+{
+	for (int i=2; i*i<=n; i++)
+    {
+        if(!tab[i])
+		for (int j = i*i ; j<=n; j+=i)
+            tab[j] = 1;
+    }
+}
+
+
+
+void solve(){
+	int n;
+	cin >> n;
+	while(n--){
+		ll a;
+		cin >> a;
+		int start = sqrtl(a) - 1000;
+		int koniec = sqrtl(a) + 1000;
+		if(start < 0){
+			start = 0;
+		}
+		ll mid;
+		while(start != koniec){
+			mid = (start+koniec)/2;
+			if(mid * mid == a){
+				break;
+			}
+			else if(mid*mid < a){
+				start = mid + 1;
+			}
+			else{
+				koniec = mid;
+			}
+
+		}
+		if(mid * mid == a){ //wyszukac binarnie czy jest potega liczby pierwszej
+			if(!tab[mid]){
+				cout << "YES" << endl;
+			}
+			else{
+				cout << "NO" << endl;
+			}
+		}
+		else{
+			cout << "NO" << endl;
+		}
+	}
+
+}
+
+int main(){
+	solve();
+	return 0;
+}
+
+
+Zadanie 2: Promień
+
+6
+ 2  3  1  4  2  1 <- ciąg wartości
+ 6  3  8  8 10 14 <- oczekiwana suma
+ 2  0  1  2  3 -1
+
+         --------&--------
+
+Zadanie 3: Deski (str. 82)
+
+Wejście:
+4 5
+1 4
+4 5
+5 9
+8 10
+4 6 7 10 2
+Jaki jest najwcześniejszy moment, kiedy sa przybite wszystkie deski?
+
+Wyjście:
+4
+
+      1   1 1      1 <- sumy prefiksowe
+1 2 3 4 5 6 7 8 9 10
+-------
+      ---     ------
+        ---------
+
+4 6 7 10 2 (wyszukiwanie binarne po czasie - liczbie wbitych gwoździ)
+[   *    ]
+      [* ]
+      []
+
+Praca domowa:
+https://codeforces.com/problemset/problem/230/B (wysłać)
+Promień (do implementacji)
+Deski (do implementacji)
+
+
+https://www.google.com/search?q=finding+cycles+with+floyd%E2%80%99s+cycle-finding+algorithm&rlz=1C5CHFA_enPL922PL922&oq=finding+cycles+with+flo&aqs=chrome.1.69i57j33i22i29i30.9459j1j4&sourceid=chrome&ie=UTF-8

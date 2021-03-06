@@ -80,7 +80,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/DsumDEference.cpp">
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/WyszukiwanieBIN_01.cpp">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/deski.cpp">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/pionek.cpp">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/promienParasola.cpp">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/sznurki.cpp">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/wesola_malpka.cpp">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp">
 			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/CMakeLists.txt">

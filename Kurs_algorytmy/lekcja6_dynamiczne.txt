@@ -1,0 +1,466 @@
+20.02.2021 12:00
+
+
+Mateusz Filipowicz
+Paulina Nguyen [ok]
+Andrzej Wróblewski[OK]
+Adam Pawlak[OK]
+Krzysztof Ligarski [OK]
+Dominik Szczepaniak [jestem]
+Wiktor Stojek
+Andrzej Swiętek [ok]
+Piotr Bonar[ok]
+Damian Żabicki[ok]
+Jerzy Puchalski[ok]
+Grzegorz Iwaszkiewicz[ok]
+Mikołaj Szczerbetka [ok]
+
+Praca domowa:
+- Implementacja zadania Tort (str. 84)
+
+     1  2  3
+  2  2  4  6
+  4  4  8 12
+  1  1  2  3
+
+  1 2 2 3 4 4 6 8 12
+              *
+//Damian
+#include <bits/stdc++.h>
+using namespace std;
+long long n; //deklaruje n i tablice tutaj, poniewaz funkcja ich nie lapala
+long long szerokosci[200001], dlugosci[200001];
+long long WR (long long sr){ //wieksze rowne od danego 'k'
+	long long wynik=0;
+	int zm=n; //zmienna do while'a
+	for (int j=0;j<=n;j++){ //mozna schodzic schodkami, poniewaz wartosci nie beda wieksze w poprzednich kolumnach
+		while (zm>=0&&szerokosci[zm]*dlugosci[j]>=sr) zm--; //zm= kawalki ktore nie spelniaja wymagan
+		wynik+=n-zm; //^szukanie kawalkow mniejszych niz srodek
+	}
+	return wynik; //ilosc kawalkow ktore sie zgadzaja
+}
+
+
+int main () {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	long long a, b, k;
+
+	cin>>a>>b>>n>>k;
+
+	int dlugosc, ciecie=0; //od razu licze dlugosc wzgledem ciec
+	for (int i=0;i<n;i++){ //dlugosci jednego z bokow
+		cin>>dlugosc;
+		szerokosci[i]=dlugosc-ciecie;
+		ciecie=dlugosc;
+	}
+	szerokosci[n]=a-ciecie; //ostatni trzeba policzyc samemu;nie w petli
+
+	ciecie=0;
+	for (int i=0;i<n;i++){ //oddzielne liczenie dlugosci drugiego boku
+		cin>>dlugosc;
+		dlugosci[i]=dlugosc-ciecie;
+		ciecie=dlugosc;
+	}
+	dlugosci[n]=b-ciecie;
+
+	sort(dlugosci, dlugosci+n+1); //sortowanie dlugosci min->max
+	sort(szerokosci, szerokosci+n+1);
+
+
+	long long pocz, kon, sr, wynik;
+	pocz=szerokosci[0]*dlugosci[0];
+	kon=szerokosci[n]*dlugosci[n]; //wyznaczenie poczatku i konca bin
+	long long wynikmax;
+	while (pocz<=kon){ //binary search po wyniku
+		sr=(pocz+kon)/2;
+		if (WR(sr)>=k) { // zlicza ile jest elementow o rozmiarze >= sr
+			pocz=sr+1;
+			wynikmax=sr;
+		}
+		else kon=sr-1;
+	}
+	cout<<wynikmax; //pod koniec poczatek to wybrany kawalek
+}
+
+
+Zadanie 2:
+Dane jest słowo złożone z małych liter alfabetu angielskiego.
+Jaki jest najdłuższy fragment tego słowa, który zawiera wystąpienia co najwyżej
+dwóch różnych liter.
+
+|S| <= 500,000
+
+Wejście:
+abbcbaccbcbca
+           **
+
+Wyjście:
+6
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+int main(){
+    string s;
+    cin >> s;
+    int wynik = 0;
+    for(int i =0; i<s.length(); i++){
+        map<char, bool> czy; //mapa sprawdzajaca czy dana litera pojawila sie w przedziale
+        czy[s[i]] = true;
+        int koniec = i;
+        while(true){
+            koniec++;
+            if(koniec == s.length()){
+                koniec--;
+                break;
+            }
+            if(!czy[s[koniec]]){
+                if(czy.size() == 2){
+                    koniec--;
+                    break;
+                }
+                else{
+                    czy[s[koniec]] = true;
+                }
+            }
+        }
+        wynik = max(wynik, koniec - i + 1);
+    }
+    cout << wynik << endl;
+    return 0;
+}
+
+aaaaaaaaaaaaaaaaaa
+******************
+ *****************
+  ****************
+    ...
+                 *
+
+......................
+    xxxxxxx
+
+         p
+                    k
+
+
+//Damian
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	string S;
+	cin>>S;
+	char jeden, dwa;
+
+	jeden=S[0];
+	for (int i=0;i<S.size();i++){
+		if (jeden!=S[i]) {
+			dwa=S[i];
+			break;
+		}
+	}
+
+	xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+	       kon                poc
+
+
+	    a b[a a a a]c b a
+	    ************
+	    jeden=c
+	    dwa=a
+	    wynikmax=3
+
+	    a b a a a a|c b a
+	    *********** %
+	      ********* --
+	        ***********
+
+	int wynikmax=0, poc=0, counter=0;
+	for (int kon=0;kon<S.size();kon++){
+		while (poc<S.size()&&(S[poc]==jeden||S[poc]==dwa)){
+			poc++;
+		}
+		wynikmax=max(wynikmax,kon - poc);
+
+		wynik=0;
+		if (S[poc]!=jeden&&counter%2==0) {
+			jeden=S[poc];
+		}
+		else dwa=S[poc];
+		counter++;
+	}
+	cout<<wynikmax;
+}
+
+// Krzysztof L
+#include <iostream>
+#include <set>
+using namespace std;
+
+int occ[26];
+
+int main()
+{
+    string s;
+    cin >> s;
+
+    int size = s.size();
+    int end = -1;
+
+    long long result = 0;
+    set<char> letters;
+
+    for (int start = 0; start < size; start++)
+    {
+        while ((end < (size - 1)) && (letters.count(s[end + 1]) == 1 || letters.size() < 2))
+        {
+            end++;
+            letters.insert(s[end]);
+            occ[s[end] - 'a']++;
+            result = max(result, (long long)end - start + 1);
+        }
+        occ[s[start] - 'a']--;
+        if(occ[s[start] - 'a'] == 0)
+        {
+            letters.erase(s[start]);
+        }
+    }
+    cout << result << "\n";
+    return 0;
+}
+
+
+
+Zadanie Wycinek (str. 90)
+  6  4
+
+0 1   2  3  4   5  6
+  3  -2  6  1  -1  5
+0 3   1  7  8   7  12
+            x
+
+suma A[x] ... A[y] = pref[y] - pref[x - 1]
+
+szukamy największe y
+pref[y] - pref[x - 1] = suma
+pref[y] = suma + pref[x - 1]
+x = 2
+y = 5
+
+
+0 -> 0
+3 -> 1
+1 -> 2
+8 -> 4
+7 -> 5
+12 -> 6
+
+O(log(n)) * O(n) = O(n*log(n))
+  *********
+
+
+1 000 bajtow = 1KB
+1 000 000 bajtow = 1MB
+1 000 000 000 bajtow = 1GB
+
+
+1 000 000 * 4bajty = 4MB
+1 000 000 * 8bajty = 8MB
+                    ----- 12 MB
+
+1 000 000 * 12 bajtów = 12MB  / * 2
+
+wolne jest 20MB
+
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+int main()
+{
+    int n, x;
+    cin >> n >> x;
+    int liczby[n+1];
+    for(int i = 1; i<=n; i++){
+        cin >> liczby[i];
+    }
+    map<ll, int> wartosci; //mapa do zapisu wartosci sum prefiksowych i najwyzszego id
+    ll sumy[n+1];
+    sumy[0] = 0;
+    for(int i = 1; i<=n; i++){
+        sumy[i] = sumy[i-1] + (ll)liczby[i];
+        wartosci[sumy[i]] = i; //zapisywanie najwyzszego i dla sumy prefiksowej (chcemy jak najdluzszy ciag)
+    }
+    int ans = 0;
+    for(int i = 1;i<=n; i++){
+        ll szukana = sumy[i-1] + (ll)x; //dla jakiej wartosci sumy prefiksowej i sprawdzac
+        ans = max(ans, wartosci[szukana] - i + 1);
+
+    }
+    if(ans == 0){
+        cout << "BRAK" << endl;
+    }
+    else{
+        cout << ans << endl;
+    }
+    return 0;
+}
+
+
+
+
+//Damian
+#include <bits/stdc++.h>
+using namespace std;
+int main () {
+	int n, s;
+	cin>>n>>s;
+	long long pref[n+1];
+	int tab[n];
+	pair <long long, long long> tabl[n+1];
+	for (int i=0;i<n;i++) cin>>tab[i]; //wczytywanie liczb
+	pref[0]=0;
+	for (int i=1;i<=n;i++) pref[i]=tab[i-1]+pref[i-1]; //prefixy
+	for (int i=0;i<n;i++){
+		tabl[i].first=pref[i+1];
+		tabl[i].second=i+1; //oznaczanie miejsca przed sortowaniem w parach
+	}
+	sort(tabl,tabl+n+1); //sort dla wyszukania dobrego przedzialu
+	long long wynik=0;
+	int poc=0;
+	for (int kon=0; kon<n;kon++){
+		while (poc<n&&(tabl[poc].first-tabl[kon].first)<=s){
+			if ((tabl[poc].first-tabl[kon].first)==s) {
+				wynik=max(wynik, (tabl[poc].second-tabl[kon].second));
+			}
+			poc++;
+		}
+	}
+	if (wynik!=0) cout<<wynik;
+	else cout<<"BRAK";
+}
+
+
+0  1   2  3  4   5  6
+   3  -2  6  1  -1  5
+0  3   1  7  8   7  12
+
+(0,0) (3,1) (1,2) (7,3) (8,4) (7,5) (12,6)
+
+  (1,2) (3,1) (7,3) (7,5) (8,4) (12,6)
+         **************
+
+  pref[y] - pref[x - 1] = S
+  pref[y] = S + pref[x - 1]
+
+
+Programowanie zachłanne/dynamiczne
+1, 2, 5, 10, 20, 50, 100, 200, 500
+
+
+1, 2, 5
+Najlepiej, żeby każdą kwotę dało się wydać.
+
+2, 5
+Jak zapłacić w sklepie kwotę 1?
+
+5 - 2 - 2 = 1
+
+
+2 6
+Jak zapłacić 1?
+
+
+28 -> 5 + 5 + 5 + 5 + 5 + 2 + 1 = 28
+
+
+Jak może wyglądać system (nominały) tak, żeby zachłan od największych nie działał???
+
+1 3 4
+
+6 -> 4 1 1
+6 -> 3 3
+
+
+
+"Problem wydawania reszty"
+Dostanie opis naszego portfela
+moneta1, moneta2, ..., monetan
+
+Jakie kwoty można zapłacić korzystając z dostępnych monet?
+
+N <= 100
+monety_i <= 100
+
+Wejście:
+4
+2 3 3 7
++ + +
+
+Wyjście:
+2 3 5 6 7 8 9 10 12 13 15
+
+
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
++   + +   + +   +             +     +
+
+              +   +  +     +  +     +
+
+
+#include<iostream>
+using namespace std;
+
+const MAX_SUM = 10005;
+
+bool kwota[MAX_SUM];
+
+int main() {
+    int n;
+    cin >> n;
+
+    int suma = 0;
+    kwota[0] = true;
+
+    while(n--) {
+        int moneta;
+        cin >> moneta;
+        for(int i = suma; i >= 0; i--) {
+            if(kwota[i]) {
+                kwota[i + moneta] = true;
+            }
+        }
+        suma += moneta;
+    }
+
+    for(int i = 1; i <= suma; i++) {
+        if(kwota[i]) {
+            cout << i << " ";
+        }
+    }
+
+    return 0;
+}
+
+Złożoność czasowa O(n * suma)
+
+
+Zadanie: Kostki domina
+
+
+Praca domowa:
+Sznurki (str. 96)
+Pionek (str. 104)
+
+
+

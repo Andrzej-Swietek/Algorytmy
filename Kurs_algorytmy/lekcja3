@@ -1,0 +1,389 @@
+30.01.2021 12:00
+
+Bartek Łukasiewicz [obecny]
+
+Mateusz Filipowicz
+Paulina Nguyen [ok]
+Andrzej Wróblewski[OK]
+Adam Pawlak[OK]
+Krzysztof Ligarski [OK]
+Dominik Szczepaniak [ok]
+Wiktor Stojek [ok]
+Krzysztof Mazurkiewicz[ok]
+Andrzej Świętek {{ok}}
+Piotr Bonar
+Damian Żabicki [ok]
+Jerzy Puchalski[ok]
+Grzegorz Iwaszkiewicz[ok]
+
+
+
+
+Praca domowa:
+1) Implementacja https://codeforces.com/problemset/problem/199/A
+// Dominik Szczepaniak
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define FOR(i, n, m) for(int i=n; i<m; ++i)
+#define ll long long
+
+void solve(){
+	ll n;
+	cin >> n;
+	cout << n << " 0 0" << endl;
+}
+
+
+int main(){
+	solve();
+	return 0;
+}
+
+//Damian
+#include <iostream>
+using namespace std;
+int main() {
+	int n;
+	cin >> n;
+	cout << "0 0 " << n;
+}
+
+
+2) Implementacja https://codeforces.com/problemset/problem/365/B
+// Dominik
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define FOR(i, n, m) for(int i=n; i<m; ++i)
+#define ll long long
+
+void solve(){
+	int n;
+	cin >> n;
+	vector<int> nums(n);
+	int check = 2;
+	int ans = 0;
+	for(int i = 0; i<n; i++){
+		cin >> nums[i];
+		if(i>=2){
+			if(nums[i]!=nums[i-1] + nums[i-2]){
+				check = 2;
+			}
+			else{
+				check++;
+			}
+			ans = max(ans, check);
+		}
+	}
+	if(n<=2){
+		cout << n << endl;
+		return;
+	}
+	cout << ans << endl;
+
+}
+
+int main(){
+	solve();
+	return 0;
+}
+
+
+1 2 3 5 8 0 0 13 21 34 55 89
+0 0 1 1 1 0 0  0  0  1  1  1
+
+3) Implementacja zadanie 3.
+
+
+// Dominik
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define FOR(i, n, m) for (int i = n; i < m; ++i)
+#define ll long long
+
+const int MAX = 100;
+
+ll fib[MAX + 5];
+
+void policz() {
+  fib[1] = 1;
+  fib[2] = 1;
+  for (int i = 3; i <= MAX; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+  }
+}
+
+// abaababaabaab
+// 12345678
+
+int main() {
+  policz();
+
+  ll n; // <= 10^18
+  cin >> n;
+
+  if (n == 1) {
+    cout << "a";
+    return 0;
+  }
+
+  ll indeks = 1;
+
+  while (fib[indeks] < n) {
+    indeks++;
+  }
+
+  while (indeks > 2) {
+    if (n > fib[indeks - 1]) {
+      n -= fib[indeks - 1];
+      indeks--;
+    }
+    indeks--;
+  }
+
+  if (indeks == 1) {
+    cout << "b" << endl;
+  } else {
+    cout << "a" << endl;
+  }
+
+  return 0;
+}
+
+
+4) Implementacja zadania "Zajączek"
+//Dominik
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define FOR(i, n, m) for(int i=n; i<m; ++i)
+#define ll long long
+
+ll fib[33];
+
+ll fibonacci(int n){
+	fib[0] = 0;
+	fib[1] = 1;
+	for(int i = 2; i<=n; i++){
+		fib[i] = fib[i-1] + fib[i-2];
+	}
+	return fib[n];
+}
+
+void solve(){
+	int n;
+	cin >> n;
+	vector<int> m(n+1);
+	for(int i =0; i<n+1; i++){
+		cin >> m[i];
+	}
+	vector<int> sposoby(n+1, INT_MAX);
+	if(m[0] == 1 || m[n] == 1){ //jesli na pierwszym lub ostatnim miejscu jest kamien to -1
+		cout << -1 << endl;
+		return;
+	}
+	sposoby[0] = 0;
+	for(int i=0; i<=n; i++){
+		if(sposoby[i] != INT_MAX){ //sprawdzanie dla kazdego kamienia do ktorego mozna dojsc z poczatku
+			for(int j =1; j<33; j++){
+				if(fibonacci(j) > n-i){
+					break;
+				}
+				if(m[i+fibonacci(j)] == 0) { //jesli z tego kamienia mozna doskoczyc na nastepny to
+					sposoby[i+fibonacci(j)] = min(sposoby[i] + 1, sposoby[i+fibonacci(j)]); //sprawdz ktora z mozliwosci jest mniejsza
+				}
+			}
+		}
+	}
+	if(sposoby[n] == INT_MAX){//jesli int_max to nie da sie tam dojsc
+		cout << -1 << endl;
+		return;
+	}
+	cout << sposoby[n] << endl;
+
+}
+
+int main(){
+	solve();
+	return 0;
+}
+
+//Damian
+#include <bits/stdc++.h>
+using namespace std;
+int zlicz[300001];
+int main () {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	int n;
+	cin>>n;
+	int tab[n+1];
+	for (int i=0;i<=n;i++) cin>>tab[i];
+
+	int fib[n+1];
+	fib[0]=0;
+	fib[1]=1;
+	int m;
+	for (int i=2;i<=n;i++){
+		fib[i]=fib[i-1]+fib[i-2];
+		if (fib[i]>n) {
+			m=i;
+			break;
+		}
+	}
+	for (int i=0;i<m;i++) zlicz[fib[i]]++;
+	int skoki=n;
+	int wynik=0;
+	while (skoki>0){
+		for(int i=skoki;i>0;i--){
+			if (tab[n-skoki+i]==0&&zlicz[i]>0) {
+				wynik++;
+				skoki-=i;
+				break;
+			}
+		}
+	}
+	if (skoki<0||tab[0]==1||tab[n]==1){
+		cout<<"-1";
+		return 0;
+	}
+	cout<<wynik;
+}
+
+
+Zadanie 1: "Spotkanie"
+Jaka jest ostatnia cyfra fib(N)
+
+0 1 1 2 3 5 8 3 1 4 5 9 4 3 7 0 7 7 4 1 5 6 1 7 8 5 3 8 1 9 0 9 9 8 7 5 2 7 9 6 5 1 6 7 3 0 3 3 6 9 5 4 9 3 2 5 7 2 9 1|0 1 1 2 3
+***                                                                                                                     ***
+
+    a b                              a b
+
+    a b = 10 * 10 = 100 różnych par
+
+
+
+Zadanie 2: "Drabina"
+Zapytań 1,000,000
+
+    N <= 1,000,000 - rozmiar drabiny
+    p <= 30 - przez co modulować wynik
+
+    Na ile sposobów można przejść po drabinie z N szczeblami?
+
+    Wynik % 2^p
+
+
+F1 = 1
+F2 = 1
+F3 = 2
+...
+F(n) = F(n-1) + F(n-2)
+
+ *  *  *  *
+    ------> F(n-2)
+       ---> F(n-1)
+
+2, 4, 8, 16, 32, ..., 2^30
+
+
+
+
+===== Wyszukiwanie binarne =====
+
+
+augustynowicz
+borowski
+czarkowski
+denc
+englert
+fibonacci
+gauss
+kowalski
+
+---------------------*--*-**-----*-----------*------------------------------------------->
+
+1000 stron
+
+1000 -> 500 -> 250 -> 125 -> 62 -> 31 -> 15 -> 7 -> 3 -> 1
+1000 -> 500 -> 250 -> 125 -> 63 -> 32 -> 16 -> 8 -> 4 -> 2 -> 1
+
+liczba ruchów log(N)
+
+10^3 ~ 10
+10^6 ~ 20
+10^9 ~ 30
+
+
+
+Zadanie 3:
+Dany jest ciąg liczb naturalnych.
+
+N <= 200,000
+A_i <= 10^9
+
+Wejście:
+6
+3 4 2 5 1 9 10
+4 <- zapytania <= 200,000
+4
+8
+2
+7
+
+Wyjście:
+TAK
+NIE
+TAK
+NIE
+
+Sortujemy 1 2 3 4 5 9 10
++ Wyszukiwanie binarne
+
+
+
+Zadanie 4:
+
+N <= 200,000
+A_i <= 1000
+K = 4
+
+3 4 2|5 1 4|3 2 4|4 1
+  9     10    9    5
+
+suma maksymalnego kawałka była jak najmniejsza
+
+Czy da się podzielić ciąg na 4 kawałki tak, żeby suma każdego <= 9?
+3 4 2|5 1|4 3 2|4 4 1
+  9    6    9     9
+
+
+Czy da się podzielić ciąg na 4 kawałki tak, żeby suma każdego <= 8?
+3 4 2 5 1 4 3 2 4 4 1
+
+
+8 -> NIE
+9 -> TAK
+10 -> TAK
+
+---------------+++++++++++++++++++++++++++++++++++++++++>
+ 1          8  9                                    suma wszystkiego
+
+sufit(suma wszystkiego / K) .. suma wszystkiego
+
+
+
+Wyszukiwanie binarne po wyniku log(suma) * O(N)
+
+
+
+
+
+Praca domowa:
+1) Implementacja "Spotkanie".
+2) Implementacja "Drabina".
+3) Do pomyślenia Promień + Deski (temat: wyszukiwanie binarne).

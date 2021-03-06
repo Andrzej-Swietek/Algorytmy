@@ -123,32 +123,221 @@ algorithms/fast:
 	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
-Kurs_algorytmy/DsumDEference.o: Kurs_algorytmy/DsumDEference.cpp.o
+Kurs_algorytmy/WyszukiwanieBIN_01.o: Kurs_algorytmy/WyszukiwanieBIN_01.cpp.o
 
-.PHONY : Kurs_algorytmy/DsumDEference.o
+.PHONY : Kurs_algorytmy/WyszukiwanieBIN_01.o
 
 # target to build an object file
-Kurs_algorytmy/DsumDEference.cpp.o:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.o
-.PHONY : Kurs_algorytmy/DsumDEference.cpp.o
+Kurs_algorytmy/WyszukiwanieBIN_01.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/WyszukiwanieBIN_01.cpp.o
+.PHONY : Kurs_algorytmy/WyszukiwanieBIN_01.cpp.o
 
-Kurs_algorytmy/DsumDEference.i: Kurs_algorytmy/DsumDEference.cpp.i
+Kurs_algorytmy/WyszukiwanieBIN_01.i: Kurs_algorytmy/WyszukiwanieBIN_01.cpp.i
 
-.PHONY : Kurs_algorytmy/DsumDEference.i
+.PHONY : Kurs_algorytmy/WyszukiwanieBIN_01.i
 
 # target to preprocess a source file
-Kurs_algorytmy/DsumDEference.cpp.i:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.i
-.PHONY : Kurs_algorytmy/DsumDEference.cpp.i
+Kurs_algorytmy/WyszukiwanieBIN_01.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/WyszukiwanieBIN_01.cpp.i
+.PHONY : Kurs_algorytmy/WyszukiwanieBIN_01.cpp.i
 
-Kurs_algorytmy/DsumDEference.s: Kurs_algorytmy/DsumDEference.cpp.s
+Kurs_algorytmy/WyszukiwanieBIN_01.s: Kurs_algorytmy/WyszukiwanieBIN_01.cpp.s
 
-.PHONY : Kurs_algorytmy/DsumDEference.s
+.PHONY : Kurs_algorytmy/WyszukiwanieBIN_01.s
 
 # target to generate assembly for a file
-Kurs_algorytmy/DsumDEference.cpp.s:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/DsumDEference.cpp.s
-.PHONY : Kurs_algorytmy/DsumDEference.cpp.s
+Kurs_algorytmy/WyszukiwanieBIN_01.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/WyszukiwanieBIN_01.cpp.s
+.PHONY : Kurs_algorytmy/WyszukiwanieBIN_01.cpp.s
+
+Kurs_algorytmy/zadania/deski.o: Kurs_algorytmy/zadania/deski.cpp.o
+
+.PHONY : Kurs_algorytmy/zadania/deski.o
+
+# target to build an object file
+Kurs_algorytmy/zadania/deski.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/deski.cpp.o
+.PHONY : Kurs_algorytmy/zadania/deski.cpp.o
+
+Kurs_algorytmy/zadania/deski.i: Kurs_algorytmy/zadania/deski.cpp.i
+
+.PHONY : Kurs_algorytmy/zadania/deski.i
+
+# target to preprocess a source file
+Kurs_algorytmy/zadania/deski.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/deski.cpp.i
+.PHONY : Kurs_algorytmy/zadania/deski.cpp.i
+
+Kurs_algorytmy/zadania/deski.s: Kurs_algorytmy/zadania/deski.cpp.s
+
+.PHONY : Kurs_algorytmy/zadania/deski.s
+
+# target to generate assembly for a file
+Kurs_algorytmy/zadania/deski.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/deski.cpp.s
+.PHONY : Kurs_algorytmy/zadania/deski.cpp.s
+
+Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.o: Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.o
+
+.PHONY : Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.o
+
+# target to build an object file
+Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.o
+.PHONY : Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.o
+
+Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.i: Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.i
+
+.PHONY : Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.i
+
+# target to preprocess a source file
+Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.i
+.PHONY : Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.i
+
+Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.s: Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.s
+
+.PHONY : Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.s
+
+# target to generate assembly for a file
+Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.s
+.PHONY : Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.s
+
+Kurs_algorytmy/zadania/pionek.o: Kurs_algorytmy/zadania/pionek.cpp.o
+
+.PHONY : Kurs_algorytmy/zadania/pionek.o
+
+# target to build an object file
+Kurs_algorytmy/zadania/pionek.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/pionek.cpp.o
+.PHONY : Kurs_algorytmy/zadania/pionek.cpp.o
+
+Kurs_algorytmy/zadania/pionek.i: Kurs_algorytmy/zadania/pionek.cpp.i
+
+.PHONY : Kurs_algorytmy/zadania/pionek.i
+
+# target to preprocess a source file
+Kurs_algorytmy/zadania/pionek.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/pionek.cpp.i
+.PHONY : Kurs_algorytmy/zadania/pionek.cpp.i
+
+Kurs_algorytmy/zadania/pionek.s: Kurs_algorytmy/zadania/pionek.cpp.s
+
+.PHONY : Kurs_algorytmy/zadania/pionek.s
+
+# target to generate assembly for a file
+Kurs_algorytmy/zadania/pionek.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/pionek.cpp.s
+.PHONY : Kurs_algorytmy/zadania/pionek.cpp.s
+
+Kurs_algorytmy/zadania/promienParasola.o: Kurs_algorytmy/zadania/promienParasola.cpp.o
+
+.PHONY : Kurs_algorytmy/zadania/promienParasola.o
+
+# target to build an object file
+Kurs_algorytmy/zadania/promienParasola.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/promienParasola.cpp.o
+.PHONY : Kurs_algorytmy/zadania/promienParasola.cpp.o
+
+Kurs_algorytmy/zadania/promienParasola.i: Kurs_algorytmy/zadania/promienParasola.cpp.i
+
+.PHONY : Kurs_algorytmy/zadania/promienParasola.i
+
+# target to preprocess a source file
+Kurs_algorytmy/zadania/promienParasola.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/promienParasola.cpp.i
+.PHONY : Kurs_algorytmy/zadania/promienParasola.cpp.i
+
+Kurs_algorytmy/zadania/promienParasola.s: Kurs_algorytmy/zadania/promienParasola.cpp.s
+
+.PHONY : Kurs_algorytmy/zadania/promienParasola.s
+
+# target to generate assembly for a file
+Kurs_algorytmy/zadania/promienParasola.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/promienParasola.cpp.s
+.PHONY : Kurs_algorytmy/zadania/promienParasola.cpp.s
+
+Kurs_algorytmy/zadania/sznurki.o: Kurs_algorytmy/zadania/sznurki.cpp.o
+
+.PHONY : Kurs_algorytmy/zadania/sznurki.o
+
+# target to build an object file
+Kurs_algorytmy/zadania/sznurki.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/sznurki.cpp.o
+.PHONY : Kurs_algorytmy/zadania/sznurki.cpp.o
+
+Kurs_algorytmy/zadania/sznurki.i: Kurs_algorytmy/zadania/sznurki.cpp.i
+
+.PHONY : Kurs_algorytmy/zadania/sznurki.i
+
+# target to preprocess a source file
+Kurs_algorytmy/zadania/sznurki.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/sznurki.cpp.i
+.PHONY : Kurs_algorytmy/zadania/sznurki.cpp.i
+
+Kurs_algorytmy/zadania/sznurki.s: Kurs_algorytmy/zadania/sznurki.cpp.s
+
+.PHONY : Kurs_algorytmy/zadania/sznurki.s
+
+# target to generate assembly for a file
+Kurs_algorytmy/zadania/sznurki.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/sznurki.cpp.s
+.PHONY : Kurs_algorytmy/zadania/sznurki.cpp.s
+
+Kurs_algorytmy/zadania/wesola_malpka.o: Kurs_algorytmy/zadania/wesola_malpka.cpp.o
+
+.PHONY : Kurs_algorytmy/zadania/wesola_malpka.o
+
+# target to build an object file
+Kurs_algorytmy/zadania/wesola_malpka.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/wesola_malpka.cpp.o
+.PHONY : Kurs_algorytmy/zadania/wesola_malpka.cpp.o
+
+Kurs_algorytmy/zadania/wesola_malpka.i: Kurs_algorytmy/zadania/wesola_malpka.cpp.i
+
+.PHONY : Kurs_algorytmy/zadania/wesola_malpka.i
+
+# target to preprocess a source file
+Kurs_algorytmy/zadania/wesola_malpka.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/wesola_malpka.cpp.i
+.PHONY : Kurs_algorytmy/zadania/wesola_malpka.cpp.i
+
+Kurs_algorytmy/zadania/wesola_malpka.s: Kurs_algorytmy/zadania/wesola_malpka.cpp.s
+
+.PHONY : Kurs_algorytmy/zadania/wesola_malpka.s
+
+# target to generate assembly for a file
+Kurs_algorytmy/zadania/wesola_malpka.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/wesola_malpka.cpp.s
+.PHONY : Kurs_algorytmy/zadania/wesola_malpka.cpp.s
+
+Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.o: Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.o
+
+.PHONY : Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.o
+
+# target to build an object file
+Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.o
+.PHONY : Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.o
+
+Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.i: Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.i
+
+.PHONY : Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.i
+
+# target to preprocess a source file
+Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.i
+.PHONY : Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.i
+
+Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.s: Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.s
+
+.PHONY : Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.s
+
+# target to generate assembly for a file
+Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.s
+.PHONY : Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.s
 
 # Help Target
 help:
@@ -159,9 +348,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... algorithms"
-	@echo "... Kurs_algorytmy/DsumDEference.o"
-	@echo "... Kurs_algorytmy/DsumDEference.i"
-	@echo "... Kurs_algorytmy/DsumDEference.s"
+	@echo "... Kurs_algorytmy/WyszukiwanieBIN_01.o"
+	@echo "... Kurs_algorytmy/WyszukiwanieBIN_01.i"
+	@echo "... Kurs_algorytmy/WyszukiwanieBIN_01.s"
+	@echo "... Kurs_algorytmy/zadania/deski.o"
+	@echo "... Kurs_algorytmy/zadania/deski.i"
+	@echo "... Kurs_algorytmy/zadania/deski.s"
+	@echo "... Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.o"
+	@echo "... Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.i"
+	@echo "... Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.s"
+	@echo "... Kurs_algorytmy/zadania/pionek.o"
+	@echo "... Kurs_algorytmy/zadania/pionek.i"
+	@echo "... Kurs_algorytmy/zadania/pionek.s"
+	@echo "... Kurs_algorytmy/zadania/promienParasola.o"
+	@echo "... Kurs_algorytmy/zadania/promienParasola.i"
+	@echo "... Kurs_algorytmy/zadania/promienParasola.s"
+	@echo "... Kurs_algorytmy/zadania/sznurki.o"
+	@echo "... Kurs_algorytmy/zadania/sznurki.i"
+	@echo "... Kurs_algorytmy/zadania/sznurki.s"
+	@echo "... Kurs_algorytmy/zadania/wesola_malpka.o"
+	@echo "... Kurs_algorytmy/zadania/wesola_malpka.i"
+	@echo "... Kurs_algorytmy/zadania/wesola_malpka.s"
+	@echo "... Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.o"
+	@echo "... Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.i"
+	@echo "... Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.s"
 .PHONY : help
 
 
