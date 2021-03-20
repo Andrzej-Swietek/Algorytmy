@@ -83,6 +83,12 @@
 		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/WyszukiwanieBIN_01.cpp">
 			<Option target="algorithms"/>
 		</Unit>
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp">
+			<Option target="algorithms"/>
+		</Unit>
 		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/deski.cpp">
 			<Option target="algorithms"/>
 		</Unit>
@@ -93,6 +99,9 @@
 			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/promienParasola.cpp">
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/szklanki.cpp">
 			<Option target="algorithms"/>
 		</Unit>
 		<Unit filename="/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/sznurki.cpp">

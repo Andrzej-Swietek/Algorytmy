@@ -161,6 +161,45 @@ CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp -o CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.s
 
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.o: CMakeFiles/algorithms.dir/flags.make
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.o: ../Kurs_algorytmy/zadania/szklanki.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrzejswietek/CLionProjects/algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.o -c /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/szklanki.cpp
+
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/szklanki.cpp > CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.i
+
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/szklanki.cpp -o CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.s
+
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.o: CMakeFiles/algorithms.dir/flags.make
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.o: ../Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrzejswietek/CLionProjects/algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.o -c /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp
+
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp > CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.i
+
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp -o CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.s
+
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.o: CMakeFiles/algorithms.dir/flags.make
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.o: ../Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/andrzejswietek/CLionProjects/algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.o -c /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp
+
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp > CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.i
+
+CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp -o CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.s
+
 # Object files for target algorithms
 algorithms_OBJECTS = \
 "CMakeFiles/algorithms.dir/Kurs_algorytmy/WyszukiwanieBIN_01.cpp.o" \
@@ -170,7 +209,10 @@ algorithms_OBJECTS = \
 "CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/sznurki.cpp.o" \
 "CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/pionek.cpp.o" \
 "CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.o" \
-"CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.o"
+"CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.o" \
+"CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.o" \
+"CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.o" \
+"CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.o"
 
 # External object files for target algorithms
 algorithms_EXTERNAL_OBJECTS =
@@ -183,9 +225,12 @@ algorithms: CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/sznurki.cpp.o
 algorithms: CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/pionek.cpp.o
 algorithms: CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/najwiekszaSumaNieBioracDwuchKolejnych.cpp.o
 algorithms: CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/znajdzNajdluzszyWpolnyPodciag.cpp.o
+algorithms: CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.o
+algorithms: CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.o
+algorithms: CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.o
 algorithms: CMakeFiles/algorithms.dir/build.make
 algorithms: CMakeFiles/algorithms.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/andrzejswietek/CLionProjects/algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable algorithms"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/andrzejswietek/CLionProjects/algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable algorithms"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/algorithms.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

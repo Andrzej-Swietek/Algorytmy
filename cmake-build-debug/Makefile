@@ -150,6 +150,60 @@ Kurs_algorytmy/WyszukiwanieBIN_01.cpp.s:
 	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/WyszukiwanieBIN_01.cpp.s
 .PHONY : Kurs_algorytmy/WyszukiwanieBIN_01.cpp.s
 
+Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.o: Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.o
+
+.PHONY : Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.o
+
+# target to build an object file
+Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.o
+.PHONY : Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.o
+
+Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.i: Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.i
+
+.PHONY : Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.i
+
+# target to preprocess a source file
+Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.i
+.PHONY : Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.i
+
+Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.s: Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.s
+
+.PHONY : Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.s
+
+# target to generate assembly for a file
+Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.s
+.PHONY : Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.cpp.s
+
+Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.o: Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.o
+
+.PHONY : Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.o
+
+# target to build an object file
+Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.o
+.PHONY : Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.o
+
+Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.i: Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.i
+
+.PHONY : Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.i
+
+# target to preprocess a source file
+Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.i
+.PHONY : Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.i
+
+Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.s: Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.s
+
+.PHONY : Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.s
+
+# target to generate assembly for a file
+Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.s
+.PHONY : Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.cpp.s
+
 Kurs_algorytmy/zadania/deski.o: Kurs_algorytmy/zadania/deski.cpp.o
 
 .PHONY : Kurs_algorytmy/zadania/deski.o
@@ -258,6 +312,33 @@ Kurs_algorytmy/zadania/promienParasola.cpp.s:
 	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/promienParasola.cpp.s
 .PHONY : Kurs_algorytmy/zadania/promienParasola.cpp.s
 
+Kurs_algorytmy/zadania/szklanki.o: Kurs_algorytmy/zadania/szklanki.cpp.o
+
+.PHONY : Kurs_algorytmy/zadania/szklanki.o
+
+# target to build an object file
+Kurs_algorytmy/zadania/szklanki.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.o
+.PHONY : Kurs_algorytmy/zadania/szklanki.cpp.o
+
+Kurs_algorytmy/zadania/szklanki.i: Kurs_algorytmy/zadania/szklanki.cpp.i
+
+.PHONY : Kurs_algorytmy/zadania/szklanki.i
+
+# target to preprocess a source file
+Kurs_algorytmy/zadania/szklanki.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.i
+.PHONY : Kurs_algorytmy/zadania/szklanki.cpp.i
+
+Kurs_algorytmy/zadania/szklanki.s: Kurs_algorytmy/zadania/szklanki.cpp.s
+
+.PHONY : Kurs_algorytmy/zadania/szklanki.s
+
+# target to generate assembly for a file
+Kurs_algorytmy/zadania/szklanki.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Kurs_algorytmy/zadania/szklanki.cpp.s
+.PHONY : Kurs_algorytmy/zadania/szklanki.cpp.s
+
 Kurs_algorytmy/zadania/sznurki.o: Kurs_algorytmy/zadania/sznurki.cpp.o
 
 .PHONY : Kurs_algorytmy/zadania/sznurki.o
@@ -351,6 +432,12 @@ help:
 	@echo "... Kurs_algorytmy/WyszukiwanieBIN_01.o"
 	@echo "... Kurs_algorytmy/WyszukiwanieBIN_01.i"
 	@echo "... Kurs_algorytmy/WyszukiwanieBIN_01.s"
+	@echo "... Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.o"
+	@echo "... Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.i"
+	@echo "... Kurs_algorytmy/zadania/AAAA_NajdłuższyWspólnyPodciągu_dynamiczne.s"
+	@echo "... Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.o"
+	@echo "... Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.i"
+	@echo "... Kurs_algorytmy/zadania/NajdluzszyPodciagPalindromem.s"
 	@echo "... Kurs_algorytmy/zadania/deski.o"
 	@echo "... Kurs_algorytmy/zadania/deski.i"
 	@echo "... Kurs_algorytmy/zadania/deski.s"
@@ -363,6 +450,9 @@ help:
 	@echo "... Kurs_algorytmy/zadania/promienParasola.o"
 	@echo "... Kurs_algorytmy/zadania/promienParasola.i"
 	@echo "... Kurs_algorytmy/zadania/promienParasola.s"
+	@echo "... Kurs_algorytmy/zadania/szklanki.o"
+	@echo "... Kurs_algorytmy/zadania/szklanki.i"
+	@echo "... Kurs_algorytmy/zadania/szklanki.s"
 	@echo "... Kurs_algorytmy/zadania/sznurki.o"
 	@echo "... Kurs_algorytmy/zadania/sznurki.i"
 	@echo "... Kurs_algorytmy/zadania/sznurki.s"
