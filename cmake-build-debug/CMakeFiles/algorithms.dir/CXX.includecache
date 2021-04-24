@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/WyszukiwanieBIN_01.cpp
+/Users/andrzejswietek/CLionProjects/algorithms/Kurs_algorytmy/zadania/wybrzeze.cpp
 iostream
+-
+math.h
+-
+vector
 -
 

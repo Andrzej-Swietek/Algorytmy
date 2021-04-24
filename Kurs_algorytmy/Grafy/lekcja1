@@ -1,0 +1,492 @@
+17.04.2021 12:00
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define pb push_back
+
+int n, kwota;
+vector<vector<char>> tab(kwota+105);
+vector<pair<bool, int>> reach(kwota+105);
+
+int main() {
+    cin >> n >> kwota;
+
+    reach[0] = {1, -1};
+    tab[0] = {};
+    for(int i = 0; i<n; i++){
+        int a,b;
+        cin >> a >> b;
+        for(int j = kwota-1; j>=0; j--){
+            if(reach[j].first){
+                if(reach[j].second == i-1){
+                    reach[j+a] = {1, i};
+                    tab[j+a] = tab[j];
+                    tab[j+a].pb('L');
+
+                    reach[j+b] = {1, i};
+                    tab[j+b] = tab[j];
+                    tab[j+b].pb('P');
+
+                    if(j+ a == kwota && i == n-1){
+                        for(auto k : tab[j+a]){
+                            cout << k;
+                        }
+                        return 0;
+                    }
+                    if(j+ b == kwota && i == n-1){
+                        for(auto k : tab[j+b]){
+                            cout << k;
+                        }
+                        return 0;
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, sum;
+    cin >> n >> sum;
+
+    int L[n+5], R[n+5];
+    int minimumSum = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> L[i] >> R[i];
+        minimumSum += min(L[i], R[i]);
+    }
+
+    if (minimumSum > sum)
+    {
+        cout << "NIE\n";
+        return 0;
+    }
+
+    if (minimumSum == sum)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            if (L[i] < R[i])
+            {
+                cout << "L";
+            }
+            else
+            {
+                cout << "P";
+            }
+        }
+        return 0;
+    }
+
+    int sumDifference = sum - minimumSum;
+    int delta[n+5];
+    for (int i = 1; i <= n; i++)
+    {
+        delta[i] = abs(L[i] - R[i]);
+    }
+
+    bool val[n+5][sumDifference + 5];
+    for (int i = 0; i <= n; i++)
+    {
+        for (int j = 0; j <= sumDifference + 2; j++)
+        {
+            val[i][j] = false;
+        }
+    }
+
+    val[0][0] = true;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = sumDifference; j >= 0; j--)
+        {
+            if (val[i - 1][j])
+            {
+                val[i][j] = true;
+                if (j + delta[i] <= sumDifference)
+                {
+                    val[i][j + delta[i]] = true;
+                }
+            }
+        }
+    }
+
+    if (!val[n][sumDifference])
+    {
+        cout << "NIE\n";
+        return 0;
+    }
+
+    bool usedMoreExpensiveOption[n + 5] = {0};
+
+    int j = sumDifference;
+    for (int i = n; i > 0; i--)
+    {
+        if (!val[i - 1][sumDifference])
+        {
+            j -= delta[i];
+            usedMoreExpensiveOption[i] = true;
+        }
+    }
+
+    for (int i = 1; i <= n; i++)
+    {
+        if (usedMoreExpensiveOption[i])
+        {
+            if (R[i] > L[i])
+            {
+                cout << "P";
+            }
+            else
+            {
+                cout << "L";
+            }
+        }
+        else
+        {
+            if (L[i] < R[i])
+            {
+                cout << "L";
+            }
+            else
+            {
+                cout << "P";
+            }
+        }
+    }
+    return 0;
+}
+
+
+
+
+#include <iostream>
+using namespace std;
+
+const int MAX_N = 105;
+const int MAX_K = 10005;
+
+bool DP[MAX_N][MAX_K];
+int L[MAX_N], P[MAX_N];
+
+int main() {
+    int n, k;
+    cin >> n >> k;
+
+    for(int i = 1; i <= n; i++) {
+        cin >> L[i] >> P[i];
+    }
+
+    DP[0][0] = true;
+
+    for(int i = 1; i <= n; i++) {
+        for(int j = k; j >= 0; j--) {
+            if(DP[i - 1][j] && j + L[i] <= k) {
+                DP[i][j + L[i]] = true;
+            }
+            if(DP[i - 1][j] && j + P[i] <= k) {
+                DP[i][j + P[i]] = true;
+            }
+        }
+    }
+
+    if(!DP[n][k]) {
+        cout << "NIE\n";
+        return 0;
+    }
+
+    string wynik = "";
+
+    for(int i = n; i >= 1; i--) {
+        if(k - L[i] >= 0 && DP[i - 1][k - L[i]]) { // biore lewy
+            wynik = "L" + wynik;
+            k -= L[i];
+        } else { // biore prawy
+            wynik = "P" + wynik;
+            k -= P[i];
+        }
+    }
+
+    cout << wynik;
+
+    return 0;
+}
+
+
+
+
+#include <iostream>
+using namespace std;
+
+const int MAX_2 = 29;
+const int MAX_5 = 12;
+const int ILE_PAR = (1 + MAX_2) * (1 + MAX_5);
+
+pair<int, int> pary[ILE_PAR + 1];
+int Z[MAX_2 + 1][MAX_5 + 1];
+
+// ile razy w rozkladzie liczby 'x' wystepuje 'p'
+int ile(int x, int p) {
+    int wynik = 0;
+    while(x % p == 0) {
+        x /= p;
+        wynik++;
+    }
+    return wynik;
+}
+
+void akt(int nr, int x) {
+    int i2 = pary[nr].first;
+    int i5 = pary[nr].second;
+    Z[i2][i5] += x;
+}
+
+bool czy(int nr) {
+    int i2 = pary[nr].first;
+    int i5 = pary[nr].second;
+    return Z[i2][i5] >= 0;
+}
+
+int policz(int i, int j, int k) {
+    int i2 = pary[i].first + pary[j].first + pary[k].first;
+    int i5 = pary[i].second + pary[j].second + pary[k].second;
+    return min(i2, i5);
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    for(int i = 1; i <= n; i++) {
+        int a;
+        cin >> a;
+        int ile2 = ile(a, 2);
+        int ile5 = ile(a, 5);
+        Z[ile2][ile5]++;
+    }
+
+    int i = 0;
+    for(int i2 = 0; i2 <= MAX_2; i2++) {
+        for(int i5 = 0; i5 <= MAX_5; i5++) {
+            i++;
+            pary[i] = make_pair(i2, i5);
+        }
+    }
+
+    int wynik = 0;
+    for(int i = 1; i <= ILE_PAR; i++) {
+        for(int j = i; j <= ILE_PAR; j++) {
+            for(int k = j; k <= ILE_PAR; k++) {
+                akt(i, -1);
+                akt(j, -1);
+                akt(k, -1);
+
+                if(czy(i) && czy(j) && czy(k)) {
+                    wynik = max(wynik, policz(i, j, k));
+                }
+
+                akt(i, 1);
+                akt(j, 1);
+                akt(k, 1);
+            }
+        }
+    }
+    cout << wynik;
+
+    return 0;
+}
+
+
+
+
+======== GRAFY ===========
+graf = (wierzchołki, krawedzie)
+
+G = (V, E)
+V = {1,2,3,4,5,6}
+E = {(1,2,2), (2,4,10), (4,5,3), (4,6,9), (5,6,2)}
+
+Krawędzie mogą mieć dodatkowe informacje, nazywamy je ETYKIETAMI (wagami).
+Również wierzchołki mogą mieć swoje etykiety.
+
+Krawędzie mogą być skierowane (możemy przejść nimi tylko w jedną stronę),
+nieskierowane (możemy przejść w dwie strony)
+-> krawedź skierowaną możemy zamienić na dwie krawędzie skierowane
+
+
+Ile może być najwięcej krawędzi w N wierzchołkowym grafie?
+     N - 1
+
+     *--*
+     | /
+     *
+
+Krawędzie wielokrotne łączą te samy pary wierzchołków.
+Pętla to krawędź, która łączy ten sam wierzchołek.
+
+Graf, który nie ma pętli i krawędzi wielokrotnych to
+maksymalna liczba krawędzi nieskierowanych wynosi N(N-1)/2.
+
+Stopień wierzchołka - ile krawędzie dotyka dany wierzchołek.
+Stopień wchodzący - ile krawędzi wchodzi do danego wierzchołka
+Stopień wychodzący - ile krawędzi wychodzi z danego wierzchołka
+
+Wierzchołek samotny to taki, który ma stopień = 0,
+
+Ścieżka = ciąg krawędzi/wierzchołki, które należy pokonać, aby przejść z A -> B.
+
+
+N - liczba wierzchołków
+M - liczba krawędzi
+
+Jak przechowywać graf?
+
+Macierz sąsiedztwa
+  1 2 3 4 5 6
+1
+2 +     +
+3
+4         + +
+5           +
+6
+
+Pamięć: O(N^2)
+Czy istnieje krawędź od A -> B? O(1)
+Jakich sąsiadów ma wierzchołek A? O(N)
+Ilu sąsiadów ma wierzchołek A? O(N) -> O(1)
+
+
+Lista sąsiedztwa
+1:
+2: 1, 4
+3:
+4: 5, 6
+5: 6
+6:
+
+Pamięć: O(N+M)
+Czy istnieje krawędż od A -> B? O(stopień A)
+        * załóżmy, że lista sąsiadów jest posortowana rosnąco O(log(stopien A))
+Jakich sąsiadów ma wierzchołek A? O(stopien A)
+Ilu sąsiadów ma wierzchołek A? O(stopien A) -> O(1)
+
+
+
+DFS:
+#include <iostream>
+#include <vector>
+using namespace std;
+
+const int MAX_N = 100005;
+
+vector<int> G[MAX_N];
+int wynik;
+bool odwiedzony[MAX_N];
+
+void dfs(int v) {
+    wynik++;
+    odwiedzony[v] = true;
+
+    for(int sasiad : G[v]) {
+        if(!odwiedzony[sasiad]) {
+            dfs(sasiad);
+        }
+    }
+}
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+
+    for(int i = 1; i <= m; i++) {
+        int a, b;
+        cin >> a >> b;
+        G[a].push_back(b);
+        G[b].push_back(a);
+    }
+
+    dfs(1);
+
+    cout << wynik;
+
+    return 0;
+}
+
+
+
+Praca domowa:
+1) Gwiazda/słoneczko to taki graf, który ma wierzchołek środkowy i krawędzie z niego wychodzące do pozostałych wierzchołków.
+Sprawdź, czy graf jest gwiazdą.
+N, M <= 200,000
+
+Wejście:
+5 4
+3 2
+1 3
+3 5
+4 3
+
+Wyjście:
+TAK
+
+Wejście:
+3 3
+1 2
+2 3
+1 3
+
+Wyjście:
+NIE
+
+
+2) ścieżka - można wierzchołki uporządkować w rzędzie, żeby pomiędzy kolejnymi zawsze była krawędź
+N, M <= 200,000
+
+Wejście:
+4 3
+3 1
+4 1
+2 3
+
+
+Wyjście:
+TAK
+
+
+Wejście:
+3 3
+1 2
+2 3
+1 3
+
+Wyjście:
+NIE
+
+3) Lista kontaktów (str. 134)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
